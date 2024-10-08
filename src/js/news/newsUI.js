@@ -26,3 +26,9 @@ function articleHtml(article) {
         </div>
     `
 }
+
+function setup() {
+
+}
+
+setup()
