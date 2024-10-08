@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Subrayada:wght@400;700&display=swap')
+
+$mainred: #ff4747 // Переменная нашего красного цвета
+
+html 
+    font-size: 62.5%
+
+* 
+    box-sizing: border-box
+
+body
+    padding: 2% 2.5% 0%
+
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.logo
+    height: 80%
+    width: 80%
+
+.navbar
+    display: flex
+    align-items: center
+
+.btn
+    &:not(:last-child)
+        margin-right: 2vw
+
+    a
+        color: black
+        text-decoration: none
+        font-size: 3.6rem
+        font-family: "Montserrat Subrayada", sans-serif
+        font-weight: 700
+
+    &__underline
+        height: 0.3rem
+        background-color: $mainred
+        margin-top: 0.3rem
+
+.selected
+    background-color: $mainred
+    padding: 0.6rem 0.9rem
+    border-radius: 1.3rem
+
+    a
+        color: white
+
+    .btn__underline
+        display: none
+
+.user 
+    display: flex
+
+.socials
+    display: flex
+    align-items: center
+
+    &__tg
+        margin-right: 1.95rem
+
+    &__yt
+        margin-right: 1.65rem
+
+    &__vk
+        margin-right: 2.775rem
