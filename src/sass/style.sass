@@ -1,9 +1,8 @@
-@import "typography"
+@import "abstracts/_variables"
 
-$mainred: #ff4747
-$maingreen: #02CC83
-$maingray: #00000030
-$transition: 0.2s ease
+@import "core/_normalize"
+@import "core/_reset"
+@import "core/_typography"
 
 html 
     font-size: 62.5%
@@ -11,170 +10,11 @@ html
 
 * 
     box-sizing: border-box
-    font-family: "museo", sans-serif!important
+    font-family: "museo", sans-serif !important
 
 body
     padding: 2% 2.5% 0%
 
-.header
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 64px
+@import "layout/_header"
 
-.logo
-    height: 80%
-    width: 80%
-
-.navbar
-    display: flex
-    align-items: center
-
-.btn
-    &:not(:last-child)
-        margin-right: 2vw
-
-    a
-        color: black
-        text-decoration: none
-        font-size: 3.6rem
-        font-weight: 700
-
-    &__underline
-        height: 0.3rem
-        background-color: $mainred
-        margin-top: 0.3rem
-
-.selected
-    background-color: $mainred
-    padding: 0.6rem 0.9rem
-    border-radius: 1.3rem
-
-    a
-        color: white
-
-    .btn__underline
-        display: none
-
-.user 
-    display: flex
-
-.socials
-    display: flex
-    align-items: center
-
-    &__tg
-        margin-right: 1.95rem
-
-    &__yt
-        margin-right: 1.65rem
-
-    &__vk
-        margin-right: 2.775rem
-
-.swiper-wrapper.games_swiper-wrapper
-    width: 100%
-
-.game_section
-    margin-bottom: 6rem
-
-    &:last-child
-        padding-bottom: 6rem
-
-.game_header
-    display: flex
-    margin-bottom: 48px
-
-    .btn_prev
-        margin-right: 24px
-
-.game_month
-    font-size: 64px
-    font-weight: 700
-    flex-grow: 1
-
-.btn_arrow
-    width: 64px
-    height: 64px
-    border-radius: 1.3rem
-    display: flex
-    justify-content: center
-    background: #fff
-    border: 3px solid #CACACA
-
-    &:hover
-        cursor: pointer
-        border-color: $mainred
-        background: $mainred
-
-        img
-            filter: invert(1)
-
-    img
-        width: 32px
-
-.swiper-slide.games_swiper-slide
-    width: 32%
-    margin-right: 2%
-    background: #fff
-    border-radius: 1.3rem
-
-.game_wrapper
-    padding: 24px
-
-    .badge
-        margin-bottom: 1.2rem
-
-    .game_title
-        margin-bottom: 1rem
-
-    .game_score
-        margin-bottom: 1.2rem
-
-.badge
-    font-size: 2.4rem
-    font-weight: 700
-    background: $mainred
-    border-radius: 1.3rem
-    color: #fff
-    width: fit-content
-    padding: 0.8rem 3.2rem
-
-.game_title
-    font-size: 3.2rem
-    font-weight: 700
-
-.game_score
-    font-size: 6.4rem
-    font-weight: 700
-
-.game_footer
-    display: flex
-    width: 100%
-
-    *
-        margin: auto 0
-
-    img
-        width: 37px
-        height: 32px
-        margin-right: 1.2rem
-
-    .badge
-        margin-bottom: 0
-
-    .game_time
-        margin-right: 2.4rem
-
-.game_time
-    font-size: 2.4rem
-    font-weight: 700
-
-.game_status-lose
-    background-color: $mainred 
-
-.game_status-win
-    background-color: $maingreen
-
-.game_status-draw
-    background-color: $maingray
+@import "pages/_games"

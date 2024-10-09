@@ -1,0 +1,55 @@
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 64px
+
+.logo
+    height: 80%
+    width: 80%
+
+.navbar
+    display: flex
+    align-items: center
+
+.btn
+    &:not(:last-child)
+        margin-right: 2vw
+
+    a
+        color: black
+        text-decoration: none
+        font-size: 3.6rem
+        font-weight: 700
+
+    &__underline
+        height: 0.3rem
+        background-color: $mainred
+        margin-top: 0.3rem
+
+.selected
+    background-color: $mainred
+    padding: 0.6rem 0.9rem
+    border-radius: 1.3rem
+
+    a
+        color: white
+
+    .btn__underline
+        display: none
+
+.user 
+    display: flex
+
+.socials
+    display: flex
+    align-items: center
+
+    &__tg
+        margin-right: 1.95rem
+
+    &__yt
+        margin-right: 1.65rem
+
+    &__vk
+        margin-right: 2.775rem
