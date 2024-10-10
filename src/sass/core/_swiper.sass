@@ -1,0 +1,38 @@
+.swiper-wrapper.games_swiper-wrapper
+    width: 100%
+
+.btn_arrow
+    width: 64px
+    height: 64px
+    border-radius: 1.3rem
+    display: flex
+    justify-content: center
+    background: #fff
+    border: 3px solid #CACACA
+
+    &:not(.swiper-button-disabled):hover
+        cursor: pointer
+        border-color: $mainred
+        background: $mainred
+
+        img
+            filter: invert(1)
+
+    img
+        width: 32px
+
+.swiper-button-disabled
+    opacity: 0.5
+
+.swiper_title
+    font-size: 4.8rem
+    font-weight: 900
+    margin: auto 0
+    flex-grow: 1
+
+.swiper_header
+    display: flex
+    margin-bottom: 2.4rem
+
+    .btn_prev
+        margin-right: 24px

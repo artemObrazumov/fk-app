@@ -68,6 +68,62 @@
   font-size: 2.2rem;
 }
 
+.person_wrapper {
+  text-align: center;
+  width: calc(100% - 16px);
+  margin: auto;
+}
+
+.person_image {
+  max-width: 100%;
+}
+
+.person_info_wrapper {
+  background: #fff;
+  padding: 2.4rem;
+  border-radius: 10px;
+  display: flex;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.person_number {
+  font-size: 6rem;
+  margin: auto 0;
+}
+
+.gameaction_wrapper {
+  background: #fff;
+  padding: 2.4rem;
+  border-radius: 10px;
+  display: flex;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.gameaction_info {
+  width: 60%;
+  margin-right: 10%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: auto;
+}
+.gameaction_info-action {
+  font-size: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.gameaction_person {
+  width: 30%;
+  position: relative;
+}
+.gameaction_person img {
+  position: absolute;
+  height: calc(100% + 4rem);
+  bottom: -2.4rem;
+  right: 0;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -445,6 +501,54 @@ html {
   padding: 2% 2.5% 0%;
 }
 
+section {
+  padding-bottom: 4.8rem;
+}
+
+.swiper-wrapper.games_swiper-wrapper {
+  width: 100%;
+}
+
+.btn_arrow {
+  width: 64px;
+  height: 64px;
+  border-radius: 1.3rem;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border: 3px solid #CACACA;
+}
+.btn_arrow:not(.swiper-button-disabled):hover {
+  cursor: pointer;
+  border-color: #ff4747;
+  background: #ff4747;
+}
+.btn_arrow:not(.swiper-button-disabled):hover img {
+  filter: invert(1);
+}
+.btn_arrow img {
+  width: 32px;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.swiper_title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin: auto 0;
+  flex-grow: 1;
+}
+
+.swiper_header {
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+.swiper_header .btn_prev {
+  margin-right: 24px;
+}
+
 @font-face {
   font-family: "museo";
   src: url(../fonts/MuseoSansCyrl-100.ttf) format("truetype");
@@ -572,10 +676,6 @@ html {
   padding: 2% 2.5% 0%;
 }
 
-.swiper-wrapper.games_swiper-wrapper {
-  width: 100%;
-}
-
 .game_section {
   margin-bottom: 6rem;
 }
@@ -585,37 +685,11 @@ html {
 
 .game_header {
   display: flex;
-  margin-bottom: 48px;
-}
-.game_header .btn_prev {
-  margin-right: 24px;
+  margin-bottom: 4.8rem;
 }
 
 .game_month {
-  font-size: 64px;
-  font-weight: 700;
-  flex-grow: 1;
-}
-
-.btn_arrow {
-  width: 64px;
-  height: 64px;
-  border-radius: 1.3rem;
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  border: 3px solid #CACACA;
-}
-.btn_arrow:hover {
-  cursor: pointer;
-  border-color: #ff4747;
-  background: #ff4747;
-}
-.btn_arrow:hover img {
-  filter: invert(1);
-}
-.btn_arrow img {
-  width: 32px;
+  font-size: 6.4rem;
 }
 
 .swiper-slide.games_swiper-slide {
