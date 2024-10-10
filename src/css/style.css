@@ -1,3 +1,73 @@
+.search {
+  display: flex;
+  align-items: center;
+}
+.search__field {
+  width: 100%;
+  background-color: #EDEDED;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  outline: none;
+}
+.search__btn {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: #EDEDED;
+}
+
+.news-card {
+  height: 52.5rem;
+}
+.news-card__image {
+  height: 39rem;
+  background-color: #EDEDED;
+  border-radius: 1rem;
+  margin-bottom: 1.6rem;
+}
+.news-card__description {
+  display: inline-flex;
+  margin-bottom: 1.6rem;
+}
+.news-card__tagbox {
+  display: flex;
+  flex-direction: row;
+}
+.news-card__tag {
+  margin-right: 1.2rem;
+}
+.news-card__title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.tag {
+  background-color: #ff4747;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 900;
+  padding: 0.7rem 3rem;
+  border-radius: 2rem;
+}
+
+.datebox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.datebox__clock {
+  height: 2.4rem;
+  margin-right: 1rem;
+}
+.datebox__date {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -361,6 +431,20 @@ table {
   border-spacing: 0;
 }
 
+html {
+  font-size: 62.5%;
+  background: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "museo", sans-serif !important;
+}
+
+.container {
+  padding: 2% 2.5% 0%;
+}
+
 @font-face {
   font-family: "museo";
   src: url(../fonts/MuseoSansCyrl-100.ttf) format("truetype");
@@ -421,25 +505,12 @@ table {
   font-weight: 900;
   font-style: italic;
 }
-html {
-  font-size: 62.5%;
-  background: #f1f1f1;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "museo", sans-serif !important;
-}
-
-body {
-  padding: 2% 2.5% 0%;
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 6.4rem;
+  padding: 2% 2.5% 0%;
 }
 
 .logo {
@@ -495,6 +566,10 @@ body {
 }
 .socials__vk {
   margin-right: 2.775rem;
+}
+
+.page_wrapper {
+  padding: 2% 2.5% 0%;
 }
 
 .swiper-wrapper.games_swiper-wrapper {
@@ -618,4 +693,54 @@ body {
 
 .game_status-draw {
   background-color: rgba(0, 0, 0, 0.1882352941);
+}
+
+.news-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-container {
+  width: 70%;
+}
+.news-container__search {
+  margin-bottom: 3.6rem;
+}
+.news-container__search button {
+  position: absolute;
+  left: 66.085%;
+}
+.news-container__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.news-container__row-card1 {
+  width: 48.5%;
+}
+.news-container__row-card2 {
+  width: 48.5%;
+}
+
+.tags-container {
+  background-color: #EDEDED;
+  width: 25%;
+  padding: 2.5rem;
+  margin-left: auto;
+  border-radius: 1rem;
+}
+.tags-container__title {
+  font-weight: 900;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+.tags-container__tags {
+  list-style-type: disc;
+  padding-left: 5rem;
+}
+.tags-container__tag {
+  font-weight: 900;
+  font-size: 3.2rem;
 }/*# sourceMappingURL=style.css.map */
