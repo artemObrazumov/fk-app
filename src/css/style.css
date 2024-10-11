@@ -23,7 +23,7 @@
   height: 52.5rem;
 }
 .news-card__image {
-  height: 39rem;
+  height: 35rem;
   background-color: #dfdfdf;
   border-radius: 1rem;
   margin-bottom: 1.6rem;
@@ -127,6 +127,52 @@
 .big-image {
   height: 50rem;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg_template.jpg) center center/cover no-repeat;
+}
+
+.product_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.8rem;
+}
+.product_item {
+  width: calc(33% - 8px);
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+.product_item-img {
+  width: 90%;
+}
+.product_item:not(:nth-child(3)) {
+  margin-right: 16px;
+}
+.product_info_wrapper {
+  border-radius: 1rem;
+  background: #fff;
+  padding: 2.4rem;
+}
+.product_title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+}
+.product_price {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.product_buy_button {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  background: #ff4747;
+  border-radius: 10px;
+  align-content: center;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.price_box {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -510,6 +556,14 @@ section {
   padding-bottom: 4.8rem;
 }
 
+.title {
+  font-size: 6.4rem;
+  font-weight: 900;
+}
+.title-smaller {
+  font-size: 4.8rem;
+}
+
 .swiper-wrapper.games_swiper-wrapper {
   width: 100%;
 }
@@ -788,10 +842,11 @@ section {
 }
 .news-container__search {
   margin-bottom: 3.6rem;
+  position: relative;
 }
 .news-container__search button {
   position: absolute;
-  left: 66.085%;
+  right: 2.4rem;
 }
 .news-container__row {
   display: flex;
@@ -937,4 +992,30 @@ section {
 }
 .stat-section__card-description {
   font-size: 3.2rem;
+}
+
+.person_header {
+  padding: 0 9.6rem 0 0;
+  height: 80rem;
+  display: flex;
+  flex-direction: row;
+}
+.person_header img {
+  flex-grow: 1;
+}
+.person_header-name {
+  flex-grow: 2;
+  text-align: center;
+  font-size: 9.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin: auto 0;
+}
+
+.bio_section .title {
+  margin-bottom: 2.8rem;
+}
+.bio_section-content {
+  font-size: 3.2rem;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
