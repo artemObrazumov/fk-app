@@ -124,6 +124,11 @@
   right: 0;
 }
 
+.big-image {
+  height: 50rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg_template.jpg) center center/cover no-repeat;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -816,4 +821,47 @@ section {
   font-weight: 700;
   font-size: 3.2rem;
   margin: 0.5rem 0;
+}
+
+.main-section__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+}
+.main-section__title {
+  font-size: 6.4rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2.3rem;
+}
+.main-section__description {
+  display: flex;
+}
+.main-section__tagbox {
+  display: flex;
+}
+.main-section__tag {
+  margin-right: 0.7rem;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+.description__about {
+  width: 70%;
+}
+.description__text {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+.description__images {
+  width: 27.5%;
+}
+.description__image {
+  height: 35rem;
+  background-color: #EDEDED;
+  border-radius: 1rem;
+  margin-bottom: 1.6rem;
 }/*# sourceMappingURL=style.css.map */
