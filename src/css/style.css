@@ -4,7 +4,7 @@
 }
 .search__field {
   width: 100%;
-  background-color: #EDEDED;
+  background-color: #dfdfdf;
   border: none;
   border-radius: 1rem;
   padding: 2rem;
@@ -16,7 +16,7 @@
   cursor: pointer;
   border: none;
   padding: 0;
-  background-color: #EDEDED;
+  background-color: #dfdfdf;
 }
 
 .news-card {
@@ -24,7 +24,7 @@
 }
 .news-card__image {
   height: 39rem;
-  background-color: #EDEDED;
+  background-color: #dfdfdf;
   border-radius: 1rem;
   margin-bottom: 1.6rem;
 }
@@ -614,12 +614,15 @@ section {
   font-weight: 900;
   font-style: italic;
 }
+.white-text {
+  color: white;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6.4rem;
-  padding: 2% 2.5% 0%;
+  padding: 2% 2.5%;
 }
 
 .logo {
@@ -802,7 +805,7 @@ section {
 }
 
 .tags-container {
-  background-color: #EDEDED;
+  background-color: #dfdfdf;
   width: 25%;
   padding: 2.5rem;
   margin-left: auto;
@@ -860,8 +863,78 @@ section {
   width: 27.5%;
 }
 .description__image {
-  height: 35rem;
-  background-color: #EDEDED;
+  background-color: #dfdfdf;
   border-radius: 1rem;
   margin-bottom: 1.6rem;
+  aspect-ratio: 16/9;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.game-info__title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.game-info__score {
+  font-size: 9.6rem;
+  font-weight: 900;
+}
+
+.live-section {
+  display: flex;
+  justify-content: space-between;
+}
+.live-section__left {
+  width: 60%;
+}
+.live-section__right {
+  width: 37.5%;
+}
+.live-section__title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+}
+.live-section__broadcast {
+  aspect-ratio: 16/9;
+  background-color: #dfdfdf;
+  border-radius: 1rem;
+}
+.live-section__timecode {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.stat-section__title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.stat-section__cards {
+  height: 17rem;
+  display: flex;
+  justify-content: space-between;
+}
+.stat-section__card {
+  width: 23.5%;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+.stat-section__card-number {
+  font-size: 6.4rem;
+  margin-bottom: 1.5rem;
+}
+.stat-section__card-description {
+  font-size: 3.2rem;
 }/*# sourceMappingURL=style.css.map */
