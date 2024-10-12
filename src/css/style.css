@@ -184,6 +184,7 @@
 .login-form__row {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .login-form__row input {
   width: 48%;
@@ -216,6 +217,7 @@
   border-radius: 5rem;
   border: none;
   background: linear-gradient(135deg, #FF4747, rgba(255, 75, 43, 0.8));
+  cursor: pointer;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
