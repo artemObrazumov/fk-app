@@ -37,7 +37,9 @@
                 <input class="search__field" type="text" placeholder="Поиск...">
                 <button class="search__btn" type="submit"><img src="icons/Search.svg" alt="Кнопка отправления запроса"></button>
             </div>
-            <div class="news-container__row">
+            <div id="tags_container" class="tags_container">
+            </div>
+            <div id="news_wrapper" class="news-container__row">
                 <div class="news-container__row-card news-card">
                     <div class="news-card__image"></div>
                     <div class="news-card__description">
@@ -97,14 +99,17 @@
         <aside class="tags-container">
             <h1 class="tags-container__title">Тэги</h1>
             <ul class="tags-container__tags">
-                <li class="tags-container__tag">Гол</li>
-                <li class="tags-container__tag">Гол</li>
-                <li class="tags-container__tag">Гол</li>
-                <li class="tags-container__tag">Гол</li>
-                <li class="tags-container__tag">Гол</li>
+                <li class="tags-container__tag" tag_id="">Гол</li>
+                <li class="tags-container__tag" tag_id="">Гол1</li>
+                <li class="tags-container__tag" tag_id="">Гол2</li>
+                <li class="tags-container__tag" tag_id="">Гол3</li>
+                <li class="tags-container__tag" tag_id="">Гол4</li>
             </ul>
         </aside>
         
     </section>
+    <script src="js/Constants.js"></script>
+    <script src="js/news/newsDataSource.js"></script>
+    <script src="js/news/newsUI.js"></script>
 </body>
 </html>
