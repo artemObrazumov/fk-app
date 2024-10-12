@@ -27,18 +27,21 @@
                     <h1 class="reg-container__title">Аккаунт</h1>
 
                     <form action="#" class="login-form">
-
-                        <div class="reg-container__row login-form__row">
-                            <input class="login-form__field" type="text" name="user-name" placeholder="Ваше имя" required>
-
-                            <input class="login-form__field" type="text" name="user-surname" placeholder="Ваша фамилия" required>
+                        
+                        <div class="reg-container__fields login-form__fields">
+                            <div class="login-form__row">
+                                <input class="login-form__field" type="text" name="user-name" placeholder="Ваше имя" required>
+    
+                                <input class="login-form__field" type="text" name="user-surname" placeholder="Ваша фамилия" required>
+                            </div>
+    
+                            <input class="login-form__field" type="mail" name="user-mail" placeholder="Введите почту" required>
+                            <input class="login-form__field" type="password" name="user-pswrd" placeholder="Введите пароль" required>
+                            <input class="login-form__field" type="password" name="user-pswrd2" placeholder="Повторите пароль" required>
                         </div>
-
-                        <input class="reg-container__mail login-form__field" type="mail" name="user-mail" placeholder="Введите почту" required>
-                        <input class="reg-container__pswrd login-form__field" type="password" name="user-pswrd" placeholder="Введите пароль" required>
-                        <input class="reg-container__pswrd2 login-form__field" type="password" name="user-pswrd2" placeholder="Повторите пароль" required>
-                        <a class="reg-container__question login-form__question" href="#">Уже есть аккаунт?</a>
-                        <button class="reg-container__btn login-form__confirm" type="submit">Создать</button>
+                        
+                        <a class="login-form__question" href="#">Уже есть аккаунт?</a>
+                        <button class="login-form__confirm" type="submit">Создать</button>
                     </form>
                 </div>
             </div>

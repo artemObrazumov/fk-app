@@ -10,6 +10,12 @@
         width: 100%
         input
             width: 48%
+    
+    &__fields
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
 
     &__field
         width: 100%
@@ -20,11 +26,13 @@
         padding: 2rem
         font-size: 1.6rem
 
-    &__question
+    &__question        
         font-size: 1.6rem
         font-weight: 700
         color: #b6b6b6
         text-decoration: none
+        padding-top: 1rem
+        margin-bottom: 3rem
         border-bottom: 1px solid transparent
         transition: $transition
         &:hover
