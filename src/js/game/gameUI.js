@@ -1,5 +1,6 @@
 const swiperPlayersSwiper = document.getElementById("swiperPlayersSwiper")
 const gameactionsSwiper = document.getElementById("gameactionsSwiper")
+const statSectionCards = document.getElementById('statSectionCards')
 
 function renderPlayers(players){
     html = "";
@@ -25,15 +26,20 @@ function playerHtml(player) {
         </div>
         `
 }
+function renderStatSection(game) {
+    statSectionCards.innerHTML = statSectionCards(game)
+}
 
-function stat_sectionHtml(Stat_section) {
-    const 
+function statSectionHtml(game) {
+    const ourScore = game.ourScore
+    const enemyScore = game.enemySco
+    let allScore = ourScore + enemyScore
     return `
     <section class="stat-section">
                 <h1 class="stat-section__title">Статистика</h1>
                 <div class="stat-section__cards">
                     <div class="stat-section__card">
-                        <h1 class="stat-section__card-number">5</h1>
+                        <h1 class="stat-section__card-number">${allScore}</h1>
                         <p class="stat-section__card-description">голов забито</p>
                     </div>
                     <div class="stat-section__card">
@@ -136,4 +142,11 @@ function renderGameInfo(game) {
     
     let score = document.getElementById("score")
     score.innerText = `${ourScore}: ${enemyScore} `
+}
+function renderAll(json) {
+    renderGameInfo(json.game)
+    renderMoment(json.gameaActions)
+    renderPlayers(json.players)
+    renderStatSection
+    renderGameActions(json.gameaActions)
 }
