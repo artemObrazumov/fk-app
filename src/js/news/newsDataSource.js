@@ -6,7 +6,7 @@ async function loadArticles(query, tagId) {
     } else {
         tagPart = ""
     }
-    let response = await fetch(API_URl + '/articles' + '?q=' + query + tagPart)
+    let response = await fetch(API_URL + '/articles' + '?q=' + query + tagPart)
     const json = await response.json()
     renderArticles(json.articles)
     setArticlesLoadingFinished()

@@ -21,10 +21,13 @@
 
 .news-card {
   height: 52.5rem;
+  cursor: pointer;
 }
 .news-card__image {
   height: 35rem;
   background-color: #dfdfdf;
+  background-position: center;
+  background-size: cover;
   border-radius: 1rem;
   margin-bottom: 1.6rem;
 }
@@ -839,6 +842,7 @@ section {
 
 .game_wrapper {
   padding: 24px;
+  cursor: pointer;
 }
 .game_wrapper .badge {
   margin-bottom: 1.2rem;
@@ -913,11 +917,37 @@ section {
   justify-content: space-between;
 }
 
+.tags_container {
+  padding-bottom: 1.8rem;
+}
+
+.tags_container-tag {
+  background: #ff4747;
+  border-radius: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2.4rem;
+  font-weight: 900;
+  padding: 0.7rem 3rem;
+  border-radius: 2rem;
+  color: #fff;
+}
+.tags_container-tag-button {
+  background: #fff;
+  border-radius: 50%;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  color: #ff4747;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .news-container {
   width: 70%;
 }
 .news-container__search {
-  margin-bottom: 3.6rem;
+  margin-bottom: 1.8rem;
   position: relative;
 }
 .news-container__search button {
@@ -1000,6 +1030,10 @@ section {
   aspect-ratio: 16/9;
 }
 
+.datebox__clock {
+  filter: invert(100%);
+}
+
 .game-info {
   display: flex;
   flex-direction: column;
@@ -1036,6 +1070,10 @@ section {
   aspect-ratio: 16/9;
   background-color: #dfdfdf;
   border-radius: 1rem;
+}
+.live-section__broadcast iframe {
+  width: 100%;
+  height: 100%;
 }
 .live-section__timecode {
   font-size: 3.2rem;

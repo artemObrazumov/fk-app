@@ -28,11 +28,11 @@ function playerHtml(player) {
 }
 
 function renderstatSectionHtml(game) {
-    const allScoreHtml = document.getElementById('allScore')
+    const allScoreHtml = document.getElementById('goals')
     const ourScore = game.ourScore
-    const enemyScore = game.enemySco
+    const enemyScore = game.enemyScore
     let allScore = ourScore + enemyScore
-    allScoreHtml.innerHTML = allScore
+    allScoreHtml.innerText = allScore
 }
 function renderGameActions(gameActions) {
     html = ''
@@ -110,20 +110,23 @@ function momentsHtml(gameActions) {
 function renderGameInfo(game) {
     const gameInfo = document.getElementById('gameInfo')
     const ourScore = game.ourScore
-    const enemyScore = game.enemySco
-    const againstTeam = game.againstTeam
+    const enemyScore = game.enemyScore
+    const againstTeam = game.againtTeam
 
     let teams = document.getElementById("teams")
     teams.innerText = `Kokoc Group / ${againstTeam}`
     
     let score = document.getElementById("score")
-    score.innerText = `${ourScore}: ${enemyScore} `
+    score.innerText = `${ourScore} : ${enemyScore} `
+    document.getElementById('game').style.background = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn5.vedomosti.ru/image/2022/8u/stz0a/original-11d8.jpg) center center/cover no-repeat`
+
+    document.getElementById('broadcast').innerHTML = `<iframe src="https://rutube.ru/play/embed/000b721a620b18a1b5846ef0ec3bffe7/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`
 }
 function renderAll(json) {
     renderGameInfo(json.game)
-    renderMoment(json.gameaActions)
+    renderMoment(json.actions)
     renderPlayers(json.players)
     renderstatSectionHtml(json.game)
-    renderGameActions(json.gameaActions)
+    renderGameActions(json.actions)
 
 }

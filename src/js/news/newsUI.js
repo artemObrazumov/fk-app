@@ -24,6 +24,7 @@ function renderArticles(articles) {
         html += articleHtml(article)
     })
     newsWrapper.innerHTML = html
+    clickableArticles()
 }
 
 function articleHtml(article) {
@@ -32,7 +33,7 @@ function articleHtml(article) {
     const image = article.articleImage.split(",")[0]
 
     return `
-        <div class="news-container__row-card news-card">
+        <div class="news-container__row-card news-card" news_id="${article.id}">
             <div class="news-card__image" style = "background-image: url(${image})"></div>
             <div class="news-card__description">
                 <div class="news-card__tagbox">
@@ -46,6 +47,14 @@ function articleHtml(article) {
             <h1 class="news-card__title">${article.title}</h1>
         </div>
     `
+}
+
+function clickableArticles() {
+    document.querySelectorAll(".news-card").forEach(card => {
+        card.addEventListener('click', () => {
+            window.location.href = WEB_URL + "/this_news.html?id=" + card.getAttribute("news_id")
+        })
+    })
 }
 
 const tagsContainer = document.getElementById("tags_container")

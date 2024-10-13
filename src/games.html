@@ -41,8 +41,8 @@
                     <div class="btn_arrow btn_prev"><img src="icons/prev.svg"></div>
                     <div class="btn_arrow btn_next"><img src="icons/next.svg"></div>
                 </header>
-                <!-- <div class="swiper games_swiper" id = "swiperGamesSwiper"> 
-                    <div class="swiper-wrapper games_swiper-wrapper">
+                <div class="swiper games_swiper"> 
+                    <div class="swiper-wrapper games_swiper-wrapper" id = "swiperGamesSwiper">
                         <div class="swiper-slide games_swiper-slide">
                             <div class="game_wrapper">
                                 <div class="badge">Домашний</div>
@@ -104,23 +104,27 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </section>
         </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    ['#game_section-1', '#game_section-2'].forEach(id => {
-        new Swiper(id + ' .games_swiper', {
-            navigation: {
-                nextEl: id + " .btn_arrow.btn_next",
-                prevEl: id + " .btn_arrow.btn_prev",
-            },
-            slidesPerView: 3,
-            spaceBetween: 32,
+    function swiper() {
+        ['#game_section-1'].forEach(id => {
+            new Swiper(id + ' .games_swiper', {
+                navigation: {
+                    nextEl: id + " .btn_arrow.btn_next",
+                    prevEl: id + " .btn_arrow.btn_prev",
+                },
+                slidesPerView: 3,
+                spaceBetween: 32,
+            })
         })
-    })
+    }
 </script>
+<script src="js/Constants.js"></script>
 <script src="js/games/gamesDataSource.js"></script>
+<script src="js/games/gamesUI.js"></script>
 </html>
