@@ -1,8 +1,6 @@
 const swiperGameWrapper = document.getElementById("swiperGamesSwiper")
 
-
-
-function rendergameWrapperHtml(games) {
+function rendergameWrapper(games) {
     html = ""
     games.forEach(game => {
         html += gameWrapperHtml(game)

@@ -27,7 +27,7 @@ function playerHtml(player) {
 }
 
 function stat_sectionHtml(Stat_section) {
-    const r = ''
+    const 
     return `
     <section class="stat-section">
                 <h1 class="stat-section__title">Статистика</h1>
