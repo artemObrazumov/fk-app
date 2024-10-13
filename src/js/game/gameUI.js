@@ -26,37 +26,13 @@ function playerHtml(player) {
         </div>
         `
 }
-function renderStatSection(game) {
-    statSectionCards.innerHTML = statSectionCards(game)
-}
 
-function statSectionHtml(game) {
+function renderstatSectionHtml(game) {
+    const allScoreHtml = document.getElementById('allScore')
     const ourScore = game.ourScore
     const enemyScore = game.enemySco
     let allScore = ourScore + enemyScore
-    return `
-    <section class="stat-section">
-                <h1 class="stat-section__title">Статистика</h1>
-                <div class="stat-section__cards">
-                    <div class="stat-section__card">
-                        <h1 class="stat-section__card-number">${allScore}</h1>
-                        <p class="stat-section__card-description">голов забито</p>
-                    </div>
-                    <div class="stat-section__card">
-                        <h1 class="stat-section__card-number">1 : 04 : 25</h1>
-                        <p class="stat-section__card-description">время матча</p>
-                    </div>
-                    <div class="stat-section__card">
-                        <h1 class="stat-section__card-number">124</h1>
-                        <p class="stat-section__card-description">передачи</p>
-                    </div>
-                    <div class="stat-section__card">
-                        <h1 class="stat-section__card-number">42</h1>
-                        <p class="stat-section__card-description">голевые передачи</p>
-                    </div>
-                </div>
-            </section>
-    `
+    allScoreHtml.innerHTML = allScore
 }
 function renderGameActions(gameActions) {
     html = ''
@@ -147,6 +123,7 @@ function renderAll(json) {
     renderGameInfo(json.game)
     renderMoment(json.gameaActions)
     renderPlayers(json.players)
-    renderStatSection
+    renderstatSectionHtml(json.game)
     renderGameActions(json.gameaActions)
+
 }
