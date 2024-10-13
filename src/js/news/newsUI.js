@@ -1,5 +1,10 @@
 let newsWrapper = document.getElementById("news_wrapper")
 let query = ""
+let input = document.getElementById('searchField')
+input.addEventListener('change', function (e) {
+    query = input.value
+    console.log(query)
+})
 let currentTag = -1
 
 function setArticlesLoadingStarted() {
@@ -14,6 +19,7 @@ function setArticlesLoadingFinished() {
 
 function renderArticles(articles) {
     html = ''
+    console.log(articles)
     articles.forEach(article => {
         html += articleHtml(article)
     })
@@ -22,12 +28,12 @@ function renderArticles(articles) {
 
 function articleHtml(article) {
 
-    const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(arguments.time);
-    const image = article.images.split(",")[0]
+    const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(article.time);
+    const image = article.articleImage.split(",")[0]
 
     return `
         <div class="news-container__row-card news-card">
-            <div class="news-card__image" style = "background-image: ${image}"></div>
+            <div class="news-card__image" style = "background-image: url(${image})"></div>
             <div class="news-card__description">
                 <div class="news-card__tagbox">
                     <div class="news-card__tag tag">Гуууль</div>

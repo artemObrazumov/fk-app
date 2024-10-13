@@ -1,1 +1,1 @@
-const API_URl = ""
+const API_URl = "https://6jy3f6-62-33-191-148.ru.tuna.am"

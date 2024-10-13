@@ -1,9 +1,14 @@
 async function loadArticles(query, tagId) {
     //let articles = []
     setArticlesLoadingStarted()
-    let response = await fetch(API_URl + '/articles' + '?tag=' + tagId + '&q=' + query)
+    if (tagId != -1){
+        tagPart = '&tag=' + tagId
+    } else {
+        tagPart = ""
+    }
+    let response = await fetch(API_URl + '/articles' + '?q=' + query + tagPart)
     const json = await response.json()
-    renderArticles(json)
+    renderArticles(json.articles)
     setArticlesLoadingFinished()
 }
 
