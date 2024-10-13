@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Вход</title>
+</head>
+<body class="login-reg-body">
+    <main class="background">
+        <div class="background__circle"></div>
+        <div class="form-container">
+            <div class="form-container__left">
+                <div class="text-container">
+                    <h1 class="text-container__title">Добро<br> пожаловать!</h1>
+                    <p class="text-container__description">Войдите, чтобы продолжить или <a href="#">зарегистрируйтесь</a></p>
+                </div>
+                <div class="logo-container">
+                    <div class="logo-container__line"></div>
+                    <a href="#"><img class="logo-container__logo" src="images/kokocgroup_logo.png" alt="Белый логотип Кокос"></a>
+                </div>
+            </div>
+            <div class="form-container__right">
+                <a class="back-arrow" href="#"><img src="icons/back_arrow.svg" alt="Стрелочка влево"></a>
+
+                <div class="login-container">
+                    <h1 class="login-container__title">Войти</h1>
+
+                    <form action="#" class="login-form">
+                        <div class="login-container__fields login-form__fields">
+                            <input class="login-form__field" type="mail" name="user-mail" placeholder="Введите почту" required>
+                            <input class="login-form__field" type="password" name="user-pswrd" placeholder="Введите пароль" required>
+                        </div>
+                        
+                        <a class="login-form__question" href="#">Забыли пароль?</a>
+                        <button class="login-form__confirm" type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

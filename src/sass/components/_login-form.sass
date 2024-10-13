@@ -1,0 +1,53 @@
+.login-form
+    width: 85%
+
+    @media (max-width: 1799px)
+        height: 85%
+
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__row
+        display: flex
+        justify-content: space-between
+        width: 100%
+        input
+            width: 48%
+    
+    &__fields
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__field
+        width: 100%
+        background-color: $mainlightgray
+        border-radius: 1rem
+        border: none
+        outline: none
+        padding: 2rem
+        font-size: 1.6rem
+
+    &__question        
+        font-size: 1.6rem
+        font-weight: 700
+        color: #b6b6b6
+        text-decoration: none
+        padding-top: 1rem
+        margin-bottom: 3rem
+        border-bottom: 1px solid transparent
+        transition: $transition
+        &:hover
+            border-color: #b6b6b6
+
+    &__confirm
+        color: white
+        font-size: 3.6rem
+        font-weight: 900
+        padding: 1rem 3.5rem
+        border-radius: 5rem
+        border: none
+        background: linear-gradient(135deg, #FF4747, rgba(255, 75, 43, 0.8))
+        cursor: pointer

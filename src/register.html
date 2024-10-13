@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Регистрация</title>
+</head>
+<body class="login-reg-body">
+    <main class="background">
+        <div class="background__circle"></div>
+        <div class="form-container">
+            <div class="form-container__left">
+                <div class="text-container">
+                    <h1 class="text-container__title">Создайте<br> свой аккаунт</h1>
+                    <p class="text-container__description">Для использования платформы необходима регистрация</p>
+                </div>
+                <div class="logo-container">
+                    <div class="logo-container__line"></div>
+                    <a href="#"><img class="logo-container__logo" src="images/kokocgroup_logo.png" alt="Белый логотип Кокос"></a>
+                </div>
+            </div>
+            <div class="form-container__right">
+                <a class="back-arrow" href="#"><img src="icons/back_arrow.svg" alt="Стрелочка влево"></a>
+
+                <div class="reg-container">
+                    <h1 class="reg-container__title">Аккаунт</h1>
+
+                    <form action="#" class="login-form">
+                        
+                        <div class="reg-container__fields login-form__fields">
+                            <div class="login-form__row">
+                                <input class="login-form__field" type="text" name="user-name" placeholder="Ваше имя" required>
+    
+                                <input class="login-form__field" type="text" name="user-surname" placeholder="Ваша фамилия" required>
+                            </div>
+    
+                            <input class="login-form__field" type="mail" name="user-mail" placeholder="Введите почту" required>
+                            <input class="login-form__field" type="password" name="user-pswrd" placeholder="Введите пароль" required>
+                            <input class="login-form__field" type="password" name="user-pswrd2" placeholder="Повторите пароль" required>
+                        </div>
+                        
+                        <a class="login-form__question" href="#">Уже есть аккаунт?</a>
+                        <button class="login-form__confirm" type="submit">Создать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,122 @@
+.login-reg-body
+    position: relative
+    z-index: -3
+    
+.background
+    height: 100vh
+    overflow: hidden
+    background: linear-gradient(135deg, #FF4747, rgba(255, 75, 43, 0.9))
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: -2
+
+    &__circle
+        height: 150rem
+        width: 150rem
+        background-color: none
+        border-radius: 100%
+        border: 3.5rem solid white
+        position: absolute
+        z-index: -1
+        top: -75%
+        left: -15%
+
+.form-container
+    width: 60vw
+    aspect-ratio: 12 / 7
+    background-color: white
+    border-radius: 1.1rem
+    box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 0.25)
+    display: inline-flex
+
+    &__left
+        width: 50%
+        height: 100%
+        background: linear-gradient(135deg, #FF4747, rgba(255, 75, 43, 0.9))
+        border-radius: 1rem 0 0 1rem
+        padding-left: 5rem
+        padding-right: 4rem
+    
+    &__right
+        width: 50%
+        height: 100%
+        background-color: white
+        border-radius: 0 1rem 1rem 0
+        // padding: 2rem 2rem 2rem 0
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+.text-container
+    height: 85%
+    padding-top: 3rem
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    color: white
+
+    &__title
+        font-weight: 900
+        font-size: 5rem
+        margin-bottom: 2rem
+
+    &__description
+        font-size: 2.5rem
+        font-weight: 200
+        width: 35rem
+
+        a
+            color: white
+
+.logo-container
+    height: 15%
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__line
+        height: 0.3rem
+        width: 30rem
+        background-color: white
+
+    &__logo
+        height: 5.5rem
+        filter: brightness(10000%)
+
+.back-arrow
+    position: absolute
+    top: 0.9rem
+    right: 1.5rem
+    filter: brightness(0)
+
+.login-container
+    height: 60%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__title
+        font-size: 4.5rem
+        font-weight: 900
+        margin-bottom: 6.5rem
+
+    &__fields
+        height: 15rem
+
+.reg-container
+    height: 82%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__title
+        font-size: 4.5rem
+        font-weight: 900
+        margin-bottom: 4.5rem
+    
+    &__fields
+        height: 35rem
