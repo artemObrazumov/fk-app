@@ -31,13 +31,25 @@ function articleHtml(article) {
 
     const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(article.time);
     const image = article.articleImage.split(",")[0]
-
+    var tag = ''
+    switch(article.articleTags[0]) {
+        case 0:
+            tag = "Матч"
+        case 1:
+            tag = "Клуб"
+        case 2:
+            tag = "Событие"
+        case 3:
+            tag = "Трансфер"
+        case 4:
+            tag = "Важное"
+    }
     return `
         <div class="news-container__row-card news-card" news_id="${article.id}">
             <div class="news-card__image" style = "background-image: url(${image})"></div>
             <div class="news-card__description">
                 <div class="news-card__tagbox">
-                    <div class="news-card__tag tag">Гуууль</div>
+                    <div class="news-card__tag tag">${tag}</div>
                 </div>
                 <div class="news-card__datebox datebox">
                     <img class="datebox__clock" src="icons/clock.png" alt="Иконка часов">

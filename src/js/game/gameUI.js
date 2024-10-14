@@ -8,7 +8,17 @@ function renderPlayers(players){
         html += playerHtml(player)
     });
     swiperPlayersSwiper.innerHTML = html;
+    clickablePlayers()
 }
+
+function clickablePlayers() {
+    document.querySelectorAll(".people_swiper-slide").forEach(person => {
+        person.addEventListener('click', () => {
+            window.location.href = WEB_URL + '/person.html?id=' + person.getAttribute("player_id")
+        })
+    })
+}
+
 function playerHtml(player) {
     console.log(player)
     const image = player.player.avatar
@@ -16,7 +26,7 @@ function playerHtml(player) {
     const number = player.player.number
 
     return `
-        <div class="swiper-slide people_swiper-slide">
+        <div class="swiper-slide people_swiper-slide" player_id="${player.player.id}">
             <div class="person_wrapper">
                 <img src="${image}">
             </div>
@@ -54,13 +64,14 @@ function gameActionHtml(gameAction) {
             type = "Пас" 
             break
         case 2:
-            type = "Офсайт" 
+            type = "Желтая карточка" 
             break
         case 3:
-            type = "Наприколе" 
+            type = "Красная карточка" 
             break
     }
-    const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(gameAction.time);
+    const date = new Date();
+    const time = date.toISOString().slice(11, 19);
     const image = gameAction.player.avatar
     const name = gameAction.player.first_name + ' ' + gameAction.player.second_name
     return `
@@ -133,4 +144,5 @@ function renderAll(json) {
     renderstatSectionHtml(json.game)
     renderGameActions(json.actions)
     swiper()
+    console.log(json)
 }

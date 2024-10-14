@@ -1,6 +1,9 @@
 async function loadPlayer() {
-    let response = await fetch(API_URL + "/team");
+    let response = await fetch(API_URL + "/players");
     let json = await response.json();
-    renderPlayers(json)
+    console.log(json)
+    renderPlayers(json.players)
+    renderTrainers(json.players)
 }
 
+loadPlayer()

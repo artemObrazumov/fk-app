@@ -43,7 +43,7 @@
                     <div class="btn_arrow btn_next"><img src="icons/next.svg"></div>
                 </header>
                 <div class="swiper people_swiper">
-                    <div class="swiper-wrapper people_swiper-wrapper">
+                    <div class="swiper-wrapper people_swiper-wrapper" id="swiperPlayersSwiper">
                         <div class="swiper-slide people_swiper-slide">
                             <div class="person_wrapper">
                                 <img src="images/player.png" class="person_image">
@@ -112,12 +112,12 @@
             </section>
             <section id="trainers_section" class="trainers_section">
                 <header class="swiper_header">
-                    <p class="swiper_title">Тренеры</p>
+                    <p class="swiper_title">Руководство</p>
                     <div class="btn_arrow btn_prev"><img src="icons/prev.svg"></div>
                     <div class="btn_arrow btn_next"><img src="icons/next.svg"></div>
                 </header>
                 <div class="swiper people_swiper">
-                    <div class="swiper-wrapper people_swiper-wrapper">
+                    <div class="swiper-wrapper people_swiper-wrapper" id="swiperTrainersSwiper">
                         <div class="swiper-slide people_swiper-slide">
                             <div class="person_wrapper">
                                 <img src="images/player.png" class="person_image">
@@ -225,4 +225,7 @@
         }
     });
 </script>
+<script src="js/Constants.js"></script>
+<script src="js/team/teamDataSource.js"></script>
+<script src="js/team/teamUI.js"></script>
 </html>

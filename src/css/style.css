@@ -113,6 +113,14 @@
   margin: auto 0;
 }
 
+.people_swiper-slide {
+  cursor: pointer;
+}
+
+.person_title {
+  margin-right: 1rem;
+}
+
 .gameaction_wrapper {
   background: #fff;
   padding: 2.4rem;
@@ -148,7 +156,7 @@
 
 .big-image {
   height: 50rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg_template.jpg) center center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn5.vedomosti.ru/image/2022/8u/stz0a/original-11d8.jpg") center center/cover no-repeat;
 }
 
 .product_wrapper {
@@ -1174,6 +1182,8 @@ section {
 }
 .description__image {
   background-color: #dfdfdf;
+  background-position: center;
+  background-size: cover;
   border-radius: 1rem;
   margin-bottom: 1.6rem;
   aspect-ratio: 16/9;
@@ -1302,8 +1312,15 @@ section {
   display: flex;
   flex-direction: row;
 }
-.person_header img {
+.person_header .player_img_container {
   flex-grow: 1;
+  text-align: center;
+}
+.person_header img {
+  height: 100%;
+}
+.person_header .person_image {
+  width: unset;
 }
 .person_header-name {
   flex-grow: 2;
