@@ -274,6 +274,31 @@
   cursor: pointer;
 }
 
+.game-card {
+  aspect-ratio: 16/9;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+  border-radius: 1rem;
+  color: white;
+  font-weight: 900;
+  position: relative;
+}
+.game-card__about {
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+}
+.game-card__title {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+.game-card__score {
+  font-size: 6.4rem;
+  margin-bottom: 1.3rem;
+}
+.game-card__clock {
+  filter: invert(100%);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1129,6 +1154,21 @@ section {
   cursor: pointer;
 }
 
+.tags-icon {
+  height: 4.5rem;
+  width: 4.5rem;
+  transform: rotate(-135deg) translateY(0.5rem);
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 767px) {
+  .tags-icon {
+    display: block;
+  }
+}
+
 .main-section__header {
   display: flex;
   flex-direction: column;
@@ -1187,10 +1227,6 @@ section {
   border-radius: 1rem;
   margin-bottom: 1.6rem;
   aspect-ratio: 16/9;
-}
-
-.datebox__clock {
-  filter: invert(100%);
 }
 
 .swiper-slide {
@@ -1512,4 +1548,78 @@ section {
 }
 .reg-container__fields {
   height: 35rem;
+}
+
+.cloub-section__title {
+  margin-bottom: 3rem;
+}
+.cloub-section__description {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+.cloub-section__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cloub-section__image {
+  background-color: #dfdfdf;
+  width: 32%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+}
+@media (max-width: 767px) {
+  .cloub-section__image {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+.playpen-section__title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+.playpen-section__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.playpen-section__left {
+  width: 50%;
+}
+.playpen-section__right {
+  width: 48%;
+  flex-direction: column;
+}
+.playpen-section__address {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+}
+.playpen-section__description {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.games-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.games-section__container {
+  width: 49.5%;
+}
+@media (max-width: 767px) {
+  .games-section__container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+.games-section__title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  margin-bottom: 2.4rem;
 }/*# sourceMappingURL=style.css.map */

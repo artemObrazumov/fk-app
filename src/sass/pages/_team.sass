@@ -1,0 +1,70 @@
+.cloub-section
+    &__title
+        margin-bottom: 3rem
+    
+    &__description
+        font-size: 3.2rem
+        font-weight: 900
+        margin-bottom: 3rem
+
+    &__images
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__image
+        background-color: $mainlightgray
+        width: 32%
+        aspect-ratio: 16 / 9
+        border-radius: 1rem
+        // background: url("path to current img") center center / cover no-repeat
+        @media (max-width: 767px)
+            width: 100%
+            margin-bottom: 3rem
+
+.playpen-section
+
+    &__title
+        font-size: 4.8rem
+        font-weight: 900
+        margin-bottom: 3rem
+
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    &__left
+        width: 50%
+
+    &__right
+        width: 48%
+        flex-direction: column
+
+    &__address
+        width: 100%
+        aspect-ratio: 16 / 9
+        border-radius: 1rem
+        background-color: $maingray
+
+    &__description
+        font-size: 3.2rem
+        font-weight: 900
+
+.games-section
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    &__container
+        width: 49.5%
+        @media (max-width: 767px)
+            width: 100%
+            margin-bottom: 3rem
+
+    &__title
+        font-size: 4.8rem
+        font-weight: 900
+        margin-bottom: 2.4rem
+
+    &__card
+        
