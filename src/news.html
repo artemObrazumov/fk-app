@@ -9,6 +9,7 @@
 <body>
     <header class="header">
         <a href="#"><img src="images/kokocgroup_logo.png" alt="Логотип KokosGroup" class="logo"></a>
+        <h1 class="navbar__title">Меню <img class="navbar__title-arrow" src="icons/arrow-icon.png" alt="Стрелочка вниз"></h1>
         <nav class="navbar">
             <div class="btn"><a href="#">Главная<div class="btn__underline"></div></a></div>
             <div class="btn selected"><a href="#">Новости<div class="btn__underline"></div></a></div>
@@ -36,9 +37,9 @@
             <div class="news-container__search search" action="#">
                 <input class="search__field" id = "searchField" type="text" placeholder="Поиск...">
                 <button class="search__btn" type="submit"><img src="icons/Search.svg" alt="Кнопка отправления запроса"></button>
+                <img class="tags-icon" src="icons/tag-icon.png" alt="Иконка тегов" >
             </div>
-            <div id="tags_container" class="tags_container">
-            </div>
+
             <div id="news_wrapper" class="news-container__row">
                 <div class="news-container__row-card news-card">
                     <div class="news-card__image"></div>
@@ -112,4 +113,51 @@
     <script src="js/news/newsDataSource.js"></script>
     <script src="js/news/newsUI.js"></script>
 </body>
+<script>
+    let menu = document.querySelector(".navbar__title");
+    let menuArrow = document.querySelector(".navbar__title-arrow");
+    let navbar = document.querySelector(".navbar");
+    let header = document.querySelector(".header");
+    let isVisible = false;
+    menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!isVisible) {
+            navbar.style.opacity = "1";
+            navbar.style.zIndex = "0";
+            navbar.style.transform = "translateY(0)";
+            header.style.marginBottom = "6.5rem";
+            menuArrow.style.transform = "translate(-1.2rem, 0.6rem) rotate(-90deg)";
+            isVisible = true;
+        } else {
+            navbar.style.opacity = "0";
+            navbar.style.zIndex = "-1";
+            navbar.style.transform = "translateY(-8rem)";
+            header.style.marginBottom = "0";
+            menuArrow.style.transform = "translate(-1.2rem, 0.6rem) rotate(90deg)";
+            isVisible = false;
+        }
+    });
+</script>
+<script>
+    let tagsIcon = document.querySelector(".tags-icon");
+    let tagsVisible = false;
+    let tags_container = document.querySelector(".tags-container");
+    let news_container = document.querySelector(".news-container");
+
+    tagsIcon.addEventListener("click", () => {
+        if (!tagsVisible) {
+            news_container.style.width = "67.5%";
+            tags_container.style.width = "30%";
+            tags_container.style.opacity = "1";
+            tags_container.style.padding = "2.5rem";
+            tagsVisible = true;
+        } else {
+            news_container.style.width = "100%";
+            tags_container.style.width = "0";
+            tags_container.style.opacity = "0";
+            tags_container.style.padding = "0";
+            tagsVisible = false;
+        }
+    })
+</script>
 </html>

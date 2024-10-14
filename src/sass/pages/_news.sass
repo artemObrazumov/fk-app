@@ -28,6 +28,9 @@
 
 .news-container
     width: 70%
+    transition: $transition
+    @media (max-width: 767px)
+        width: 100%
     
     &__search
         margin-bottom: 1.8rem
@@ -36,6 +39,15 @@
         button
             position: absolute
             right: 2.4rem
+            @media (max-width: 767px)
+                right: 7rem
+
+            img
+                height: 3.6rem
+                width: 3.6rem
+                @media (max-width: 767px)
+                    height: 4.7rem
+                    width: 4.7rem
         
 
     &__row
@@ -46,6 +58,9 @@
 
         &-card
             width: 48.5%
+            @media (max-width: 767px)
+                width: 100%
+                height: 100%
             margin-bottom: 4rem
 
 
@@ -54,6 +69,13 @@
     background-color: $mainlightgray
     width: 25%
     padding: 2.5rem
+    transition: $transition
+    @media (max-width: 767px)
+        width: 0
+        padding: 0
+        opacity: 0
+
+
     margin-left: auto
     border-radius: 1rem
 
@@ -71,3 +93,13 @@
         font-size: 3.2rem
         margin: 0.5rem 0
 
+.tags-icon
+    height: 4.5rem
+    width: 4.5rem
+    transform: rotate(-135deg) translateY(0.5rem)
+    position: absolute
+    right: 2rem
+    cursor: pointer
+    display: none
+    @media (max-width: 767px)
+        display: block

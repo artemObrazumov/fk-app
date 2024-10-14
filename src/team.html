@@ -13,11 +13,12 @@
 <body>
     <header class="header">
         <a href="#"><img src="images/kokocgroup_logo.png" alt="Логотип KokosGroup" class="logo"></a>
+        <h1 class="navbar__title">Меню <img class="navbar__title-arrow" src="icons/arrow-icon.png" alt="Стрелочка вниз"></h1>
         <nav class="navbar">
             <div class="btn"><a href="#">Главная<div class="btn__underline"></div></a></div>
             <div class="btn"><a href="#">Новости<div class="btn__underline"></div></a></div>
-            <div class="btn selected"><a href="#">Матчи<div class="btn__underline"></div></a></div>
-            <div class="btn"><a href="#">Команда<div class="btn__underline"></div></a></div>
+            <div class="btn"><a href="#">Матчи<div class="btn__underline"></div></a></div>
+            <div class="btn selected"><a href="#">Команда<div class="btn__underline"></div></a></div>
             <div class="btn"><a href="#">Магазин<div class="btn__underline"></div></a></div>
         </nav>
         <div class="user">
@@ -198,5 +199,30 @@
             spaceBetween: 16,
         })
     })
+</script>
+<script>
+    let menu = document.querySelector(".navbar__title");
+    let menuArrow = document.querySelector(".navbar__title-arrow");
+    let navbar = document.querySelector(".navbar");
+    let header = document.querySelector(".header");
+    let isVisible = false;
+    menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!isVisible) {
+            navbar.style.opacity = "1";
+            navbar.style.zIndex = "0";
+            navbar.style.transform = "translateY(0)";
+            header.style.marginBottom = "6.5rem";
+            menuArrow.style.transform = "translate(-1.2rem, 0.6rem) rotate(-90deg)";
+            isVisible = true;
+        } else {
+            navbar.style.opacity = "0";
+            navbar.style.zIndex = "-1";
+            navbar.style.transform = "translateY(-8rem)";
+            header.style.marginBottom = "0";
+            menuArrow.style.transform = "translate(-1.2rem, 0.6rem) rotate(90deg)";
+            isVisible = false;
+        }
+    });
 </script>
 </html>

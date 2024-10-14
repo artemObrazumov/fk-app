@@ -4,6 +4,11 @@
 
     &__image
         height: 35rem
+        @media (max-width: 949px)
+            aspect-ratio: 4 / 3
+        @media (max-width: 767px)
+            aspect-ratio: 16 / 9
+            height: auto
         background-color: $mainlightgray
         background-position: center
         background-size: cover
