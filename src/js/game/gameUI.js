@@ -10,9 +10,10 @@ function renderPlayers(players){
     swiperPlayersSwiper.innerHTML = html;
 }
 function playerHtml(player) {
-    const image = player.id
-    const name = player.name
-    const number = player.number
+    console.log(player)
+    const image = player.player.avatar
+    const name = player.player.first_name + ' ' + player.player.second_name
+    const number = player.player.number
 
     return `
         <div class="swiper-slide people_swiper-slide">
