@@ -1121,21 +1121,6 @@ section {
   cursor: pointer;
 }
 
-.tags-icon {
-  height: 4.5rem;
-  width: 4.5rem;
-  transform: rotate(-135deg) translateY(0.5rem);
-  position: absolute;
-  right: 2rem;
-  cursor: pointer;
-  display: none;
-}
-@media (max-width: 767px) {
-  .tags-icon {
-    display: block;
-  }
-}
-
 .main-section__header {
   display: flex;
   flex-direction: column;
