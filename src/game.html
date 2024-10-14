@@ -63,8 +63,8 @@
                     <div class="btn_arrow btn_prev"><img src="icons/prev.svg"></div>
                     <div class="btn_arrow btn_next"><img src="icons/next.svg"></div>
                 </header>
-                <div class="swiper people_swiper" id = "swiperPlayersSwiper">
-                    <div class="swiper-wrapper people_swiper-wrapper"></div>
+                <div class="swiper people_swiper">
+                    <div class="swiper-wrapper people_swiper-wrapper" id = "swiperPlayersSwiper"></div>
                 </div>
             </section>
 
@@ -96,8 +96,8 @@
                     <div class="btn_arrow btn_prev"><img src="icons/prev.svg"></div>
                     <div class="btn_arrow btn_next"><img src="icons/next.svg"></div>
                 </header>
-                <div class="swiper gameactions_swiper" id="gameactionsSwiper">
-                    <div class="swiper-wrapper gameactions_swiper-wrapper"></div>
+                <div class="swiper gameactions_swiper">
+                    <div class="swiper-wrapper gameactions_swiper-wrapper" id="gameactionsSwiper"></div>
                 </div>
             </section>
         </div>
@@ -105,26 +105,28 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    ['#players_section'].forEach(id => {
-        new Swiper(id + ' .people_swiper', {
-            navigation: {
-                nextEl: id + " .btn_arrow.btn_next",
-                prevEl: id + " .btn_arrow.btn_prev",
-            },
-            slidesPerView: 5,
-            spaceBetween: 16,
+    function swiper() {
+        ['#players_section'].forEach(id => {
+            new Swiper(id + ' .people_swiper', {
+                navigation: {
+                    nextEl: id + " .btn_arrow.btn_next",
+                    prevEl: id + " .btn_arrow.btn_prev",
+                },
+                slidesPerView: 5,
+                spaceBetween: 16,
+            })
+        });
+        ['#gameactions_section'].forEach(id => {
+            new Swiper(id + ' .gameactions_swiper', {
+                navigation: {
+                    nextEl: id + " .btn_arrow.btn_next",
+                    prevEl: id + " .btn_arrow.btn_prev",
+                },
+                slidesPerView: 3,
+                spaceBetween: 16,
+            })
         })
-    });
-    ['#gameactions_section'].forEach(id => {
-        new Swiper(id + ' .gameactions_swiper', {
-            navigation: {
-                nextEl: id + " .btn_arrow.btn_next",
-                prevEl: id + " .btn_arrow.btn_prev",
-            },
-            slidesPerView: 3,
-            spaceBetween: 16,
-        })
-    })
+    }
 </script>
 <script src="js/Constants.js"></script>
 <script src="js/game/gameDataSource.js"></script>

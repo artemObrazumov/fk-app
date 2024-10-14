@@ -43,24 +43,25 @@ function renderGameActions(gameActions) {
 }
 
 function gameActionHtml(gameAction) {
-    const type = gameAction.type
-    switch (type){
-        case "0":
+    const t = gameAction.actionType
+    let type = ""
+    switch (t){
+        case 0:
             type = "Гол" 
             break
-        case "1":
+        case 1:
             type = "Пас" 
             break
-        case "2":
+        case 2:
             type = "Офсайт" 
             break
-        case "3":
+        case 3:
             type = "Наприколе" 
             break
     }
-    const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(arguments.time);
-    const image = gameAction.image
-    const name = gameAction.name
+    const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(gameAction.time);
+    const image = gameAction.player.avatar
+    const name = gameAction.player.first_name + ' ' + gameAction.player.second_name
     return `
         <div class="swiper-slide gameactions_swiper-slide">
             <div class="gameaction_wrapper">
@@ -83,24 +84,26 @@ function renderMoment(gameActions){
 }
 
 function momentsHtml(gameActions) {
+    console.log(gameActions)
     let html = ""
     gameActions.forEach(gameAction => {
-        const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(gameAction.time);
-        let type = gameAction.type
-        switch (type){
-            case "0":
+        const t = gameAction.actionType
+        let type = ""
+        switch (t){
+            case 0:
                 type = "Гол" 
                 break
-            case "1":
+            case 1:
                 type = "Пас" 
                 break
-            case "2":
+            case 2:
                 type = "Офсайт" 
                 break
-            case "3":
+            case 3:
                 type = "Наприколе" 
                 break
         }
+        const time = new Intl.DateTimeFormat("ru", {dateStyle: "medium"}).format(gameAction.time);
         html += `
         <li class="live-section__timecode">${time} - ${type}</li>`
     });
@@ -120,7 +123,7 @@ function renderGameInfo(game) {
     score.innerText = `${ourScore} : ${enemyScore} `
     document.getElementById('game').style.background = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn5.vedomosti.ru/image/2022/8u/stz0a/original-11d8.jpg) center center/cover no-repeat`
 
-    document.getElementById('broadcast').innerHTML = `<iframe src="https://rutube.ru/play/embed/000b721a620b18a1b5846ef0ec3bffe7/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`
+    document.getElementById('broadcast').innerHTML = game.streamUrl
 }
 function renderAll(json) {
     renderGameInfo(json.game)
@@ -128,5 +131,5 @@ function renderAll(json) {
     renderPlayers(json.players)
     renderstatSectionHtml(json.game)
     renderGameActions(json.actions)
-
+    swiper()
 }

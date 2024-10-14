@@ -120,6 +120,7 @@
   display: flex;
   font-size: 32px;
   font-weight: 900;
+  height: 100%;
 }
 
 .gameaction_info {
@@ -1027,6 +1028,7 @@ section {
   padding: 0.7rem 3rem;
   border-radius: 2rem;
   color: #fff;
+  padding-right: 1rem;
 }
 .tags_container-tag-button {
   background: #fff;
@@ -1116,6 +1118,7 @@ section {
   font-weight: 700;
   font-size: 3.2rem;
   margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 .tags-icon {
@@ -1195,6 +1198,10 @@ section {
   filter: invert(100%);
 }
 
+.swiper-slide {
+  height: auto !important;
+}
+
 .game-info {
   display: flex;
   flex-direction: column;
@@ -1247,6 +1254,7 @@ section {
   aspect-ratio: 16/9;
   background-color: #dfdfdf;
   border-radius: 1rem;
+  overflow: hidden;
 }
 .live-section__broadcast iframe {
   width: 100%;
